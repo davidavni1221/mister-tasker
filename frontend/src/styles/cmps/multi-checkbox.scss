@@ -1,0 +1,14 @@
+.multi-checkbox {
+  display: flex;
+  align-items: center;
+
+  .multi-checkbox-title {
+    &:not(:empty) {
+      margin: 0 5px 0 0;
+    }
+  }
+
+  label, input {
+    cursor: pointer;
+  }
+}
