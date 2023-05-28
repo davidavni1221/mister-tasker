@@ -1,4 +1,4 @@
-add empty data-base to your local mongoDB called "task_db" and a new collection called "task".
+add empty data-base to your local mongoDB called "task_db" and a new empty collection called "task".
 
 npm i both back and front
 
