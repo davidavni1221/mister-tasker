@@ -1,7 +1,11 @@
 import {io} from 'socket.io-client';
 
-const BASE_URL = 'ws://localhost:3030';
+// const BASE_URL = 'ws://localhost:3030';
 
+const BASE_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'ws://'
+    : 'ws://localhost:3030';
 export const socketService = {
   getSocket,
   emit,

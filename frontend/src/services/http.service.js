@@ -1,6 +1,7 @@
 import Axios from 'axios';
 // import { router } from '@/router'
 
+console.log(process.env.NODE_ENV);
 const BASE_URL =
   process.env.NODE_ENV === 'production'
     ? '/api/task'
