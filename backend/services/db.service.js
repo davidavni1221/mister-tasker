@@ -3,11 +3,13 @@ const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
 
 // Connection URL
-const url = 'mongodb://localhost:27017'; // "mongodb://localhost:3030"
+// const url = 'mongodb://localhost:27017'; // "mongodb://localhost:3030"
 
 // Database Name
 const dbName = 'task_db';
-
+const url= process.env.NODE_ENV === 'production' 
+? 'mongodb+srv://toys1:1234@cluster0.z2lwcfr.mongodb.net/?retryWrites=true&w=majority'
+:'mongodb://localhost:27017'
 var dbConn = null;
 
 async function connect() {
